@@ -9,6 +9,7 @@ import sys
 import time
 from pathlib import Path
 
+
 def run_example(script_path):
     """Run a single example script and return success status."""
     print("\n" + "=" * 80)
@@ -75,7 +76,7 @@ def main():
         return 1
 
     print("=" * 80)
-    print(f"pyeducationdata Example Test Runner")
+    print("pyeducationdata Example Test Runner")
     print("=" * 80)
     print(f"\nFound {len(example_scripts)} example scripts")
     print("\nNote: These examples make real API calls and may take several minutes.")

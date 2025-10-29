@@ -6,8 +6,9 @@ This example demonstrates:
 - Working with directory data that supports simpler aggregation
 """
 
-import pyeducationdata as ped
 import pandas as pd
+
+import pyeducationdata as ped
 
 print("=" * 80)
 print("Summary Statistics Examples")
@@ -84,7 +85,7 @@ try:
         avg_enrollment = enrollment['enrollment'].mean()
         schools_count = len(enrollment)
 
-        print(f"\nGrade 9 Statistics for Rhode Island:")
+        print("\nGrade 9 Statistics for Rhode Island:")
         print(f"  Total students: {total_enrollment:,}")
         print(f"  Number of schools: {schools_count:,}")
         print(f"  Average per school: {avg_enrollment:.1f}")

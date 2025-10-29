@@ -8,9 +8,9 @@ This example demonstrates:
 
 import pyeducationdata as ped
 from pyeducationdata import (
-    ValidationError,
-    EndpointNotFoundError,
     APIConnectionError,
+    EndpointNotFoundError,
+    ValidationError,
 )
 
 print("=" * 80)
@@ -29,7 +29,7 @@ try:
         topic='enrollment'
     )
 except ValidationError as e:
-    print(f"✓ Caught ValidationError (as expected):")
+    print("✓ Caught ValidationError (as expected):")
     print(f"  {e}")
 
 
@@ -45,7 +45,7 @@ try:
         topic='nonexistent_topic'  # This endpoint doesn't exist
     )
 except (EndpointNotFoundError, APIConnectionError) as e:
-    print(f"✓ Caught endpoint error (as expected):")
+    print("✓ Caught endpoint error (as expected):")
     print(f"  {e}")
 
 
@@ -113,7 +113,7 @@ def safe_get_data(level, source, topic, **kwargs):
         )
 
         if df.empty:
-            print(f"Warning: Query returned no results")
+            print("Warning: Query returned no results")
             return None
 
         return df

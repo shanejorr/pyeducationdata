@@ -6,8 +6,8 @@ This example demonstrates:
 - Working with college-specific variables
 """
 
+
 import pyeducationdata as ped
-import pandas as pd
 
 print("=" * 80)
 print("College/University Data Examples (IPEDS)")
@@ -38,7 +38,7 @@ try:
         # Show some institutions
         if 'inst_name' in colleges.columns:
             print("\nSample institutions:")
-            for idx, row in colleges.head(5).iterrows():
+            for _idx, row in colleges.head(5).iterrows():
                 name = row.get('inst_name', 'Unknown')
                 city = row.get('city', 'Unknown')
                 print(f"  - {name} ({city})")
