@@ -29,7 +29,8 @@ class TestGetEducationData:
     @respx.mock
     def test_data_with_filters(self, mock_api_response):
         """Test data retrieval with filters."""
-        url_pattern = "https://educationdata.urban.org/api/v1/schools/ccd/enrollment/"
+        # Year goes in path, so we need to mock the URL with /2020/ in it
+        url_pattern = "https://educationdata.urban.org/api/v1/schools/ccd/enrollment/2020/"
 
         respx.get(url_pattern).mock(return_value=Response(200, json=mock_api_response))
 
@@ -142,7 +143,8 @@ class TestGetEducationDataSummary:
     @respx.mock
     def test_summary_with_filters(self):
         """Test summary with filters."""
-        url_pattern = "https://educationdata.urban.org/api/v1/schools/ccd/enrollment/summaries/"
+        # Year goes in path, so we need to mock the URL with /2020/ in it
+        url_pattern = "https://educationdata.urban.org/api/v1/schools/ccd/enrollment/2020/summaries/"
 
         summary_response = {
             "count": 1,

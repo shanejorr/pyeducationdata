@@ -38,7 +38,7 @@ class TestBuildEndpointUrl:
             filters={"year": 2020, "grade": 9},
         )
 
-        assert "year=2020" in url
+        assert "/2020/" in url  # year goes in path, not query string
         assert "grade=9" in url
         assert "?" in url
 
@@ -51,7 +51,7 @@ class TestBuildEndpointUrl:
             filters={"year": 2020, "grade": [9, 10, 11]},
         )
 
-        assert "year=2020" in url
+        assert "/2020/" in url  # year goes in path, not query string
         assert "grade=9" in url
         assert "grade=10" in url
         assert "grade=11" in url
@@ -101,7 +101,7 @@ class TestBuildSummaryUrl:
             filters={"year": 2020},
         )
 
-        assert "year=2020" in url
+        assert "/2020/" in url  # year goes in path, not query string
 
 
 class TestBuildQueryString:
