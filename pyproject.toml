@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [
-    {name = "Shane Orr", email = "shane@example.com"}
+    {name = "Shane Orr", email = "shane.j.orr@gmail.com"}
 ]
 keywords = ["education", "data", "api", "urban-institute", "research"]
 classifiers = [
@@ -47,7 +47,7 @@ Repository = "https://github.com/shaneorr/pyeducationdata"
 "Bug Tracker" = "https://github.com/shaneorr/pyeducationdata/issues"
 
 [tool.hatchling.build.targets.wheel]
-packages = ["src/pyeducationdata"]
+packages = ["pyeducationdata"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
